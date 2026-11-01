@@ -1,0 +1,11 @@
+{
+  "model": "gpt-5-mini",
+  "parameter_node": "/move_group",
+  "group": "arm",
+  "velocity_cap": 1.5,
+  "acceleration_cap": 4.0,
+  "max_api_turns": 24,
+  "max_candidates": 3,
+  "record_rosbag": true,
+  "bag_topics": ["/joint_states", "/clock", "/tf", "/tf_static", "/rosout", "/monitored_planning_scene", "/planning_scene", "/collision_object", "/attached_collision_object", "/display_planned_path", "/trajectory_execution_event", "/crane_plus_arm_controller/controller_state"]
+}
