@@ -98,13 +98,4 @@ AIの中間関節姿勢は座標誤差1mm・姿勢整合性を検査します。
 
 同じ指示でもAPIの結果は毎回同一とは限りません。実行時の指示・A-E・URDF/SRDF・制限・採用関節姿勢・軌道・検証結果・rosbagを実行フォルダに保存します。現版は保存済み計画の別時刻再生には対応せず、各起動で現在状態から再計画します。
 
-## テストと制限
 
-```bash
-cd ~/ai_motion_demo
-python3 -m unittest discover -v
-```
-
-構文、FK/IK、Noneと0の分離、動力学検査、ツールの境界をローカルで確認済み。ROS・Gazebo・実APIを組み合わせた本フォルダ版の統合試験はユーザー環境で実施する必要があります。API呼出し数は最大24ターン、候補検証は最大3回。設定ファイルで変更できます。APIキーは保存・同梱しません。
-
-参考：OpenAI function calling https://developers.openai.com/api/docs/guides/function-calling
